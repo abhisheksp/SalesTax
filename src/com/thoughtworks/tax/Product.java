@@ -17,7 +17,7 @@ public class Product {
     }
 
     public double tax(int taxPercent) {
-        return taxPercent * 12.49 / 100;
+        return taxPercent * this.price / 100;
     }
 
     public boolean isExempted(Set<String> exemptedCategory) {

@@ -10,11 +10,19 @@ import static org.junit.Assert.*;
 public class TestProduct {
 
     @Test
-    public void shouldApplyTaxGivenTaxPercent() {
+    public void shouldApplyTaxGivenTaxPercentTen() {
         Product product = new Product(12.49, "Book", "Book", false);
         int taxPercent = 10;
 
         assertEquals(12.49 * taxPercent / 100, product.tax(taxPercent), 0.0001);
+    }
+
+    @Test
+    public void shouldApplyTaxGivenTaxPercentFive() {
+        Product product = new Product(12.51, "Book", "Book", false);
+        int taxPercent = 5;
+
+        assertEquals(12.51 * taxPercent / 100, product.tax(taxPercent), 0.0001);
     }
 
     @Test
