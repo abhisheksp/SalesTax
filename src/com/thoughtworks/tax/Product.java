@@ -9,7 +9,7 @@ public class Product {
     private String category;
     private boolean isImported;
 
-    public Product(double price, String chocolate, String category, boolean isImported) {
+    public Product(double price, String name, String category, boolean isImported) {
         this.name = name;
         this.price = price;
         this.category = category;
@@ -18,5 +18,9 @@ public class Product {
 
     public double tax(int taxPercent) {
         return taxPercent * 12.49 / 100;
+    }
+
+    public boolean isExempted(Set<String> exemptedCategory) {
+        return true;
     }
 }
