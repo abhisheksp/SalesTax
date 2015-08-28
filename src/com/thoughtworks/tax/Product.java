@@ -21,6 +21,6 @@ public class Product {
     }
 
     public boolean isExempted(Set<String> exemptedCategory) {
-        return true;
+         return exemptedCategory.contains(this.category);
     }
 }
